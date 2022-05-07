@@ -1,3 +1,5 @@
+package com.vaneves.jerrymouse.response
+
 import java.io.PrintWriter
 import java.net.Socket
 import java.text.SimpleDateFormat
@@ -9,7 +11,7 @@ class Response (private val client: Socket) {
         val output = PrintWriter(client.getOutputStream(), true)
         output.println("HTTP/1.1 $code OK")
         output.println("Date: "+ SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(Date()))
-        output.println("Server: JerryMouse/0.0.1Alpha")
+        output.println("Server: com.vaneves.jerrymouse.JerryMouse/0.0.1Alpha")
         output.println("Cache-Control: no-cache")
         output.println("Keep-Alive: timeout=3, max=100")
         output.println("Connection: Keep-Alive")
