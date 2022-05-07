@@ -1,3 +1,5 @@
+package com.vaneves.jerrymouse
+
 import java.text.SimpleDateFormat
 import java.util.*
 
